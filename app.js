@@ -49,6 +49,7 @@ function Play(el){
         box2.classList.add('disableel')
         box1.classList.add('disableel')
         console.log('O has won')
+        para.innerHTML = "O has won"
         
     }else if ((box1.innerHTML=="X") && ( box2.innerHTML=='X') && (box3.innerHTML=='X')
     || ((box1.innerHTML=="X") && (box4.innerHTML=="X") && (box7.innerHTML=="X"))
@@ -68,6 +69,7 @@ function Play(el){
         box2.classList.add('disableel')
         box1.classList.add('disableel')
         console.log('X has won')
+        para.innerHTML = "X has won"
     }else{
         match = "Tied"
     }
@@ -79,7 +81,7 @@ console.log(match)
 var mint = document.querySelector('.mint')
 var sec = document.querySelector('.sec')
 var interval;
-var Mint = 2
+var Mint = 1
 var Sec = 60
 
 function timer(){
