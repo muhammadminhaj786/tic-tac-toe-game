@@ -1,33 +1,53 @@
 *{
     margin: 0px;
     box-sizing: border-box;
+    
+}
+body{
+    background-color: #c31432;
 }
 .conatiner{
-    height: 400px;
+    height: 450px;
     width: 60%;
     border: 1px solid black;
-    margin: 8% auto;
+    margin: 5% auto;
+    background: #c31432;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .header{
-    height: 20%;
+    height: 25%;
     border-bottom: 2px solid black;
     width: 100%;
 }
 p{
     text-align: center;
-    color: Green;
+}
+#para{
+    font-size: 3vw;
+    font-weight: bolder;
+    color: #240b36;
 }
 .btn{
     display: flex;
     justify-content: space-between;
-    margin-top: 5%;
+    margin-top: 1%;
 }
 .btn1{
-
+    background-color: #c31432;
+    border: none;
+    height: 40px;
+    width: 120px;
+    color: #240b36;
+    font-size: vw;
+    font-weight: bold;
+    border-radius: 5px ;
+    margin-left: 5px;
 }
 .gameboard{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 70%;
     margin: 5% auto;
     width: 60%;
@@ -80,21 +100,20 @@ p{
 }
 .txt{
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
+    color: #240b36;
+    font-weight: bolder;
 }
 .txt-zero{
     text-align: center;
     font-size: 50px;
     color: red;
+    font-weight: bolder;
+
 }
 .disableel{
     pointer-events: none;
 }
-#para{
-    font-size:3vw;
-}
-
-
 @media only screen and (max-width: 480px){
     .conatiner{
         width: 100%;
@@ -107,4 +126,8 @@ p{
         height: 70px ;
         width: 70px;
     } 
+    #para{
+        font-size: 5.2vh;
+    }
 }
+
