@@ -16,25 +16,9 @@ var para = document.getElementById('para')
 
 //restart 
 function restart(){
-    box6.classList.remove('disableel')
-    box7.classList.remove('disableel')
-    box8.classList.remove('disableel')
-    box9.classList.remove('disableel')
-    box5.classList.remove('disableel')
-    box4.classList.remove('disableel')
-    box3.classList.remove('disableel')
-    box2.classList.remove('disableel')
-    box1.classList.remove('disableel')
-// set the value
-    box1.innerHTML=""
-    box2.innerHTML=""
-    box3.innerHTML=""
-    box4.innerHTML=""
-    box5.innerHTML=""
-    box6.innerHTML=""
-    box7.innerHTML=""
-    box8.innerHTML=""
-    box9.innerHTML=""
+//relod the page
+    window.location.reload() 
+
 
 }
 
