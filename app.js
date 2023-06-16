@@ -1,5 +1,4 @@
-
-
+// get all box and assign in golbal variable
 var box1 = document.getElementById('box-1')
 var box2 = document.getElementById('box-2')
 var box3 = document.getElementById('box-3')
@@ -10,18 +9,16 @@ var box7 = document.getElementById('box-7')
 var box8 = document.getElementById('box-8')
 var box9 = document.getElementById('box-9')
 
-var match = 2
-
+// get paragraph
 var para = document.getElementById('para')
 
 //restart 
 function restart(){
-//relod the page
-    window.location.reload() 
-
-
+    //reload the page
+window.location.reload()
 }
 
+var counter=0
 //creating a flag 
 var flag = true
 function Play(el){
@@ -35,13 +32,14 @@ function Play(el){
         para.innerHTML="O turn"
         //change flag value
         flag = false
+        counter++
     }else{
         el.innerHTML="O"
         el.classList.add('txt-zero')
         el.classList.add('disableel')
         para.innerHTML="X turn"
-
         flag=true
+        counter++
     }
     if ((box1.innerHTML=="O") && ( box2.innerHTML=="O") && (box3.innerHTML=="O")
     || ((box1.innerHTML=="O") && (box4.innerHTML=="O") && (box7.innerHTML=="O"))
@@ -81,39 +79,14 @@ function Play(el){
         box2.classList.add('disableel')
         box1.classList.add('disableel')
         para.innerHTML='X has won'
-        match = match-1
         
     }
-    // else {
-    //     para.innerHTML="match tied"
-    // }
-
-}
-
-
-//Creating a timer
-var mint = document.querySelector('.mint')
-var sec = document.querySelector('.sec')
-var interval;
-var Mint = 2
-var Sec = 60
-
-function timer(){
-    Sec--
-    sec.innerHTML=Sec
-    if(Sec<=0){
-        Mint--
-        Sec=60
-        mint.innerHTML=Mint
-    }else if(Mint<=0){
-        mint.innerHTML="00"
-        sec.innerHTML="00"
-        clearInterval(interval)
+    // console.log(counter)
+    else if(counter==9){
+        para.innerHTML="match tied"
     }
+
 }
 
-function startTimer(){
-    interval = setInterval(timer,1000)
-}
 
 
